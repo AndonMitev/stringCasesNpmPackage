@@ -2,12 +2,14 @@ const titleCase = require('./titleCase');
 const lowerCase = require('./lowerCase');
 const upperCase = require('./upperCase');
 const pascalCase = require('./pascalCase');
+const snakeCase = require('./snakeCase');
 
 const validCases = {
   titleCase,
   lowerCase,
   upperCase,
-  pascalCase
+  pascalCase,
+  snakeCase
 }
 
 module.exports = (formatCase, sentence) => {
@@ -24,6 +26,10 @@ module.exports = (formatCase, sentence) => {
         };
       }))
 
-
+  if (formatCase = 'snakeCase') {
+    const lastIndexOfUnderScore = output.lastIndexOf('_');
+    //TODO: Remove last under score and replace it with empty string;
+    return output.replace(output[lastIndexOfUnderScore], '');
+  }
   return output.trim();
 }

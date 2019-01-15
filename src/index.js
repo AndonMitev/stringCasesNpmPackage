@@ -7,4 +7,4 @@ const caseConvertor = (formatCase, inputStr) => {
   return splittingSentenceToWords(formatCase, inputStr);
 }
 
-console.log(caseConvertor('upperCase', 'SAD da we'));
+console.log(caseConvertor('snakeCase', 'SAD da we'));
